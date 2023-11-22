@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLOAD</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <h1>Image Upload and Preview</h1>
+
+    <div id="image-upload">
+        <label for="file-input">Choose an image:</label>
+        <input type="file" id="file-input" accept="image/*" onchange="previewImage()">
+    </div>
+
+    <div id="image-preview">
+        <h2>Preview:</h2>
+        <img id="preview-img" alt="Preview Image">
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
