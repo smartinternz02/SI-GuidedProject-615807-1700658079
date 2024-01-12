@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLOAD</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body class="predictbod">
+    
+    <h1>Image Upload and Preview</h1>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <!-- Your existing form elements -->
+    
+        <div id="image-upload">
+            <label for="file-input">Choose an image:</label>
+            <input type="file" id="file-input" name="my_image" accept="image/*" onchange="previewImage()">
+        </div>
+    
+        <!-- Other form elements -->
+    
+        <input type="submit" value="Upload">
+    </form>
+    {% if prediction %}
+        <p class = "text-centre"><h3>The class is of {{prediction}}</h3></p>
+    {% endif %}
+    
+
+    <div id="image-preview">
+        <h2>Preview:</h2>
+        <img id="preview-img" alt="Preview Image">
+    </div>
+    <script src="/static/main.js"></script>
+</body>
+</html>
